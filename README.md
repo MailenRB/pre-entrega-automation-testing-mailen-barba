@@ -78,15 +78,11 @@ pytest tests/test_saucedemo.py -v --html=reports/reporte.html
 
 * -v: Habilita el modo detallado (verbose) en la consola.
 * --html=reports/reporte.html: Guarda el reporte final en la carpeta reports/ con el nombre reporte.html.
+* --self-contained-html: Crea un único archivo HTML autocontenido.
 
-Si deseas que el archivo HTML sea autocontenido (con los estilos CSS incrustados), puedes agregar la bandera `--self-contained-html`:
+Si deseas ver las impresiones de consola generadas por los tests, añade la bandera -s:
 ```bash
-pytest tests/test_saucedemo.py -v --html=reports/reporte.html --self-contained-html
-```
-
-Si deseas ver las impresiones de consola generadas por los tests (como el nombre y precio del primer producto encontrado), añade la bandera -s:
-```bash
-pytest tests/test_saucedemo.py -v -s --html=reports/reporte.html --self-contained-html
+pytest -v -s --html=reports/reporte.html --self-contained-html
 ```
 
 ---
